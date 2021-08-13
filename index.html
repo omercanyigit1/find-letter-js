@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Letter</title>
+</head>
+<body>
+
+<script>
+    const str = 'WeTestCodErs';
+    let arr = str.split('');
+    let element = arr.find((el) => el === el.toUpperCase());
+    let elementIndex = arr.findIndex((el) => el === el.toUpperCase());
+
+    function checkValue() {
+        if(elementIndex === 0) {
+            arr.shift();
+            let newElement = arr.find((el) => el === el.toUpperCase());
+
+            if(newElement === undefined) {
+                console.log("NO");
+            } else {
+                console.log(newElement);
+            }
+
+        } else {
+            console.log(element);
+        }
+    }
+
+    checkValue();
+
+</script>
+
+</body>
+</html>
